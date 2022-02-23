@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<title>Galeria zdjęć</title>	
+
+	<script type="text/javascript">
+		function over(id, img) 
+		{			
+			document.getElementById(id).src = img;			
+		}
+
+		function clicked(id, img)
+		{			
+			document.getElementById('set').src = img;
+			over(id,img);
+		}
+
+		function out(id, img)
+		{
+			document.getElementById(id).src = img;
+		}
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1>Zdjęcia gryzoni</h1>
+	</header>
+	<nav>
+		<h2>Kategorie</h2>
+		<ul>
+			<a href="psy.html"><li>Psy</li></a>
+			<a href="koty.html"><li>Koty</li></a>
+			<a href="gryzonie.html"><li>Gryzonie</li></a>
+			<a href="jaszczurki.html"><li>Jaszczurki</li></a>
+			<a href="inne.html"><li>Pomoc zwierzętą</li></a>
+		</ul>
+		<a href="index.html"><h4>Powrót do strony głownej</h4></a>
+	</nav>	
+	<main id="pg">
+		<h1>Wybierz zdjęcie</h1>
+		<img src="mysz.jpg" alt="pies1" onclick="clicked('1', 'mysz.jpg')" onmouseover="over('1', 'mysz.jpg')" onmouseout="out('1', 'mysz.jpg')" id="1">
+        <img src="kuna.jpg" alt="pies2" onclick="clicked('2', 'kuna.jpg')" onmouseover="over('2', 'kuna.jpg')" onmouseout="out('2', 'kuna.jpg')" id="2">
+        <img src="kawia.jpg" alt="pies3" onclick="clicked('3', 'kawia.jpg')" onmouseover="over('3', 'kawia.jpg')"onmouseout="out('3', 'kawia.jpg')" id="3">
+	</main>
+	<main id="pd">
+		 <p><img id="set" src="mysz.jpg" alt="pies-duży"></p>
+	</main>	
+	<footer>Galerię zdjęć opracował Stanisław Lenik</footer>	
+</body>
+</html>
